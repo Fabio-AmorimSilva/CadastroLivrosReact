@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const DATA = [
+
+  {title: "Conde de Monte Cristo", year: "1844", author: "Alexandre Dumas", genre: "Fiction", synopsys: "História de traição", status: "completed"},
+  {title: "Revolta de Atlas", year: "1957", author: "Ayn Rand", genre: "Romance", synopsys: "People vs Opression", status: "reading"}
+
+];
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App books={DATA}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

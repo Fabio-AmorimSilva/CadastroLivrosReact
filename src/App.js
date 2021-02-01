@@ -1,22 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {useState} from "react";
+import FilterButton from "./components/filterbutton";
+import Form from "./components/form";
+import ShowMode from "./components/show"
 
-function App() {
+function App(props) {
+
+
+  //State to uses the values of books in data bank
+  const [books, setBook] = useState(props.books);
+
+  const bookList = books.map(book => (<ShowMode 
+    title={book.title}
+    year={book.year}
+    author={book.author}
+    genre={book.genre}
+    synopsys={book.synopsys}
+    status={book.status}
+
+  />
+     
+  ));
+
+  function addBook(e){
+    const newBook = e.target.value;
+    setBook([...books, newBook]);
+  }
+
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Form addBook={addBook}/>
+        <FilterButton />
+        {bookList}
+
       </header>
     </div>
   );
