@@ -1,14 +1,15 @@
 import React from "react";
 import {useState} from "react";
 import FilterButton from "./components/filterbutton";
-import Form from "./components/form";
 import ShowMode from "./components/show"
 
 function App(props) {
 
+  //id count
+  let id = 0;
 
   //State to uses the values of books in data bank
-  const [books, setBook] = useState(props.books);
+  const [books, ] = useState(props.books);
 
   const bookList = books.map(book => (<ShowMode 
     title={book.title}
@@ -17,23 +18,17 @@ function App(props) {
     genre={book.genre}
     synopsys={book.synopsys}
     status={book.status}
-
+    key={id++}
   />
      
   ));
-
-  function addBook(e){
-    const newBook = e.target.value;
-    setBook([...books, newBook]);
-  }
-
   
   return (
     <div className="App">
       <header className="App-header">
 
-        <Form addBook={addBook}/>
         <FilterButton />
+        <h2>Books list</h2>
         {bookList}
 
       </header>

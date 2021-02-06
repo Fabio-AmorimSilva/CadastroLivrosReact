@@ -5,14 +5,7 @@ import {useState} from "react";
 export default function Show(props){
 
     const [edit, setEdit] = useState(false);
-    const [view, setView] = useState(true);
-
-    function editing(e){
-        e.preventDefault();
-        setEdit(true);
-        setView(false);
-        
-    }
+    const [, setView] = useState(true);
 
     const editBook = (
 
@@ -29,7 +22,7 @@ export default function Show(props){
                 <textarea name="sinop"></textarea><br/>
             <label htmlFor="status">Status: </label>
                 <input type="text" name="status"/><br/>
-            <button type="submit" id="btnSubmit">Save</button><br/>
+            <button type="submit" id="btnSubmit" onSubmit={() => setView(false)} onClick={() => setEdit(true)}>Save</button><br/>
             <button type="submit" id="btnCancel" onSubmit={() => setView(true)} onClick={() => setEdit(false)}>Cancel</button><br/>        
         </form>
 

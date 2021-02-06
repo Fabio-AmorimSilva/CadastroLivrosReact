@@ -33,17 +33,17 @@
 
  #btnBookAdd{
 
-  width: 310px;
-  margin-bottom: 10px;
+  width: 100px;
+  margin: 15px;
 
  }
 
  .btnState {
 
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(4, 100px);
   grid-gap: 5px;
-  margin-left: 482px;
+  margin-left: 430px;
   width: 100px;
 
  }

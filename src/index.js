@@ -8,6 +8,7 @@ const DATA = [
 
   {title: "Conde de Monte Cristo", year: "1844", author: "Alexandre Dumas", genre: "Fiction", synopsys: "História de traição", status: "completed"},
   {title: "Revolta de Atlas", year: "1957", author: "Ayn Rand", genre: "Romance", synopsys: "People vs Opression", status: "reading"}
+  
 
 ];
 
