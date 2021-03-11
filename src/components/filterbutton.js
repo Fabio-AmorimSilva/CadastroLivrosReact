@@ -7,7 +7,7 @@ export default function FilterButton(props){
     const [showForm, setForm] = useState(false);
 
     const newBook = ( 
-        <Form setForm={setForm} />
+        <Form setForm={setForm} addBook={props.addBook}/>
     );
 
     const menu = (

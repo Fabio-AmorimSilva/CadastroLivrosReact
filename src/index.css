@@ -48,5 +48,41 @@
 
  }
 
+ .bookContainer {
+
+  margin: auto;
+  width: 300px;  
+
+ }
+
+ .bookContainer legend {
+
+  margin-bottom: 5px;
+
+ }
+
+
+ .bookContainer label {
+
+  margin-bottom: 5px;
+  padding-right: 5px;
+  
+
+ }
+
+ .bookContainer input {
+
+  margin-bottom: 5px;
+  margin-left: 5px;
+  width: 100%;
+
+ }
+
+ .bookContainer button {
+
+  margin: 5px;
+  width: 60px;
+
+ }
 
 

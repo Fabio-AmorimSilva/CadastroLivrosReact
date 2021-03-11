@@ -8,23 +8,24 @@ export default function Show(props){
     const [, setView] = useState(true);
 
     const editBook = (
-
-        <form id="bookForm">
-            <label htmlFor="title">Title: </label>
-                <input type="text" name="title"/><br/>
-            <label htmlFor="year">Year: </label>
-                <input type="number" name="year"/><br/>
-            <label htmlFor="author">Author: </label>
-                <input type="text" name="author"/><br/>
-            <label htmlFor="genre">Genre: </label>
-                <input type="text" name="genre"/><br/>
-            <label htmlFor="sinop">Sinopsys</label>
-                <textarea name="sinop"></textarea><br/>
-            <label htmlFor="status">Status: </label>
-                <input type="text" name="status"/><br/>
-            <button type="submit" id="btnSubmit" onSubmit={() => setView(false)} onClick={() => setEdit(true)}>Save</button><br/>
-            <button type="submit" id="btnCancel" onSubmit={() => setView(true)} onClick={() => setEdit(false)}>Cancel</button><br/>        
-        </form>
+        <div className="bookContainer">
+            <form id="bookForm">
+                <label htmlFor="title">Title: </label>
+                    <input type="text" name="title"/><br/>
+                <label htmlFor="year">Year: </label>
+                    <input type="number" name="year"/><br/>
+                <label htmlFor="author">Author: </label>
+                    <input type="text" name="author"/><br/>
+                <label htmlFor="genre">Genre: </label>
+                    <input type="text" name="genre"/><br/>
+                <label htmlFor="sinop">Sinopsys: </label>
+                    <input type="text" name="sinop" /><br/>
+                <label htmlFor="status">Status: </label>
+                    <input type="text" name="status"/><br/>
+                <button type="submit" id="btnSubmit" onSubmit={() => setView(false)} onClick={() => setEdit(true)}>Save</button><br/>
+                <button type="submit" id="btnCancel" onSubmit={() => setView(true)} onClick={() => setEdit(false)}>Cancel</button><br/>        
+            </form>
+        </div>
 
     );
 

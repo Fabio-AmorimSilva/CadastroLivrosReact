@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import FilterButton from "./components/filterbutton";
-import ShowMode from "./components/show"
+import ShowMode from "./components/show";
 
 function App(props) {
 
@@ -9,7 +9,7 @@ function App(props) {
   let id = 0;
 
   //State to uses the values of books in data bank
-  const [books, ] = useState(props.books);
+  const [books, setBook] = useState(props.books);
 
   const bookList = books.map(book => (<ShowMode 
     title={book.title}
@@ -22,12 +22,25 @@ function App(props) {
   />
      
   ));
+
+  
+  function addBook(e){
+    setBook({
+        ...books, 
+        [e.target.name]: e.target.value,
+    })
+  }
+
+ function message(){
+    alert("Livro adicionado a biblioteca!");        
+ }
+
   
   return (
     <div className="App">
       <header className="App-header">
 
-        <FilterButton />
+        <FilterButton addBook={addBook}/>
         <h2>Books list</h2>
         {bookList}
 
